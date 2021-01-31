@@ -36,6 +36,8 @@
               Sign Up
             </button>
           </form>
+          <button @click="increaseCounter">Increase counter</button>
+          {{ count }}
         </div>
       </div>
     </div>
@@ -50,10 +52,19 @@ export default {
   // это компонет нашего проекта или компонент сторонней библиотеки?
   // хорошей практикой считается делать префиксы по названию проекта
   name: 'MclRegitster',
+  computed: {
+    count() {
+      return this.$store.state.count
+    }
+  },
   methods: {
     onSubmit() {
-      console.log('submitted form');
+      console.log('submitted form')
+    },
+    increaseCounter() {
+      console.log('increase counter')
+      this.$store.commit('increment')
     }
   }
-};
+}
 </script>

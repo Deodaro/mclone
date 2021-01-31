@@ -1,10 +1,10 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
+import Vue from 'vue'
+import VueRouter from 'vue-router'
 // @ is an alias to /src
-import Home from '@/views/Home';
-import Register from '@/views/Register';
+import Home from '@/views/Home'
+import Register from '@/views/Register'
 
-Vue.use(VueRouter);
+Vue.use(VueRouter)
 
 const routes = [
   {
@@ -17,10 +17,10 @@ const routes = [
     name: 'register',
     component: Register
   }
-];
+]
 
 const router = new VueRouter({
   routes
-});
+})
 
-export default router;
+export default router
